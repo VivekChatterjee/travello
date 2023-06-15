@@ -1,0 +1,14 @@
+<title>{{title}}</title>
+<h1>{{body}} and the cars are:</h1>
+<h2>{% for car in cars %} {{car}}, {% endfor %}</h2>
+and Details are:
+<h2>
+  {% for student in details %}
+  <h3>{{student.name}} and {{student.college}}</h3>
+  {% endfor %}
+</h2>
+<form action="add/" method="post">
+  {% csrf_token %} Enter a number: <input type="text" name="s" /><br />
+  Enter another number:<input type="text" name="t" /><br />
+  <input type="submit" />
+</form>
